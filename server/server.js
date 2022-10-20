@@ -12,7 +12,6 @@ app.get('/api/resize', async (req, res) => {
         fit: sharp.fit.inside,
         withoutEnlargement: true
       })
-    // .jpeg()
     .toBuffer()
     .then(data => { res.type('jpg').send(data) })
 })
