@@ -10,7 +10,7 @@ app.get('/api/resize', async (req, res) => {
     sharp(`./images/${filename}.jpg`)
     .resize(parseInt(width), parseInt(height), {
         fit: sharp.fit.inside,
-        withoutEnlargement: true
+        withoutEnlargement: false
       })
     .toBuffer()
     .then(data => { res.type('jpg').send(data) })
