@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const sharp = require('sharp')
+import sharp from 'sharp'
 
 app.get('/api/resize', async (req, res) => {
     const filename = req.query.filename
