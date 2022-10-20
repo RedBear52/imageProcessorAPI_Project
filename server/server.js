@@ -8,7 +8,10 @@ app.get('/api/resize', async (req, res) => {
     const height = req.query.height
 
     sharp(`./images/${filename}.jpg`)
-    .resize(parseInt(width), parseInt(height))
+    .resize(parseInt(width), parseInt(height), {
+        fit: sharp.fit.inside,
+        withoutEnlargement: true
+      })
     // .jpeg()
     .toBuffer()
     .then(data => { res.type('jpg').send(data) })
