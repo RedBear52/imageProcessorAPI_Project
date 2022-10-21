@@ -2,10 +2,10 @@
   "name": "sharppractice",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server/server.js",
+  "main": "dist/src/server/server.js",
   "scripts": {
     "test": "jasmine",
-    "start": "nodemon server/server.js",
+    "start": "nodemon dist/src/server/server.js",
     "build": "npx tsc",
     "lint": "eslint",
     "format": "prettier  --config .prettierrc 'src/**/*.ts' --write"
