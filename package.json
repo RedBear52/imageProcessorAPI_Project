@@ -2,7 +2,7 @@
   "name": "sharppractice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server/server.js",
   "scripts": {
     "test": "jasmine",
     "start": "nodemon server/server.js",
