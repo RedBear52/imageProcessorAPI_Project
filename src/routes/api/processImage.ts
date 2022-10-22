@@ -10,13 +10,14 @@ const processImage = async (
     const procImgPath = path.resolve(
         `./processed_images/${filename}_${width}x${height}.jpg`
     )
-
-    await sharp(imgPath)
-        .resize(parseInt(`${width}`), parseInt(`${height}`), {
-            fit: sharp.fit.contain,
-            withoutEnlargement: false,
-        })
-        .toFile(procImgPath)
+    try {
+        await sharp(imgPath)
+            .resize(parseInt(`${width}`), parseInt(`${height}`), {
+                fit: sharp.fit.contain,
+                withoutEnlargement: false,
+            })
+            .toFile(procImgPath)
+    } catch (err) {}
 }
 
 export default processImage
