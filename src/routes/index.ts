@@ -10,6 +10,6 @@ routes.use('/grayscale', grayscaleRoute)
 
 routes.get('/', (req, res) => {
     res.send('api route !')
-  })
+})
 
-  export default routes 
+export default routes

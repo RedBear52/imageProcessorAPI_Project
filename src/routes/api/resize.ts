@@ -1,27 +1,27 @@
 import express from 'express'
-import sharp from 'sharp'
+import fs from 'fs'
+import path from 'path'
+import processImage from './processImage'
 const resizeRoute = express.Router()
-
-// resizeRoute.get('/', (req, res) => {
-//     res.send('you found the RESIZE route')
-// })
 
 resizeRoute.get(
     '/',
-    async (req, res ) => {
-        const filename = req.query.filename
-        const width = req.query.width
-        const height = req.query.height
+    async (req: express.Request, res: express.Response): Promise<void> => {
+        const filename: string = req.query.filename as string
+        const width: number = parseInt(`${req.query.width}`)
+        const height: number = parseInt(`${req.query.height}`)
+        const imgPath = path.resolve(`./images/${filename}.jpg`)
+        const procImgPath = path.resolve(
+            `./processed_images/${filename}_${width}x${height}.jpg`
+        )
 
-        sharp(`./images/${filename}.jpg`)
-            .resize(parseInt(`${width}`), parseInt(`${height}`), {
-                fit: sharp.fit.inside,
-                withoutEnlargement: false,
-            })
-            .toBuffer()
-            .then((data) => {
-                res.type('jpg').send(data)
-            })
+        if (!fs.existsSync(procImgPath)) {
+            await processImage(imgPath, filename, width, height)
+            res.sendFile(procImgPath)
+        } else {
+            res.sendFile(procImgPath)
+        }
     }
 )
+
 export default resizeRoute
