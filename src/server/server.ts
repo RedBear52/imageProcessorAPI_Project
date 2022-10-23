@@ -1,4 +1,3 @@
-import sharp from 'sharp'
 import routes from '../routes/index'
 
 const express = require('express')
@@ -10,3 +9,5 @@ app.use('/api', routes)
 app.listen(port, () => {
     console.log(`server awake and listening at: ${port}`)
 })
+
+export default app

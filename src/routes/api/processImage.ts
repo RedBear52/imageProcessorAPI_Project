@@ -11,11 +11,11 @@ const processImage = async (
         `./processed_images/${filename}_${width}x${height}.jpg`
     )
     await sharp(imgPath)
-    .resize(parseInt(`${width}`), parseInt(`${height}`), {
-        fit: sharp.fit.cover,
-        withoutEnlargement: false,
-    })
-    .toFile(procImgPath)
+        .resize(parseInt(`${width}`), parseInt(`${height}`), {
+            fit: sharp.fit.cover,
+            withoutEnlargement: false,
+        })
+        .toFile(procImgPath)
 }
 
 export default processImage
