@@ -14,7 +14,11 @@ const validateInput = (req: express.Request, res: express.Response, next: expres
     }  else if (isNaN(parseInt(`${req.query.height}`))) {
         res.status(400)
         next('Error: Your query string is missing a proper HEIGHT parameter - Please enter a numerical value')
-    }  else if (!req.query.filename || parseInt(`${req.query.filename}`)) {
+    }  else if ((parseInt(`${req.query.height}`) <= 0)) {
+        res.status(400)
+        next(`Error: Improper parameter input.
+        Please enter a numerical value greater than ZERO.` )
+    } else if (!req.query.filename || parseInt(`${req.query.filename}`)) {
         res.status(400)
         next(`Error: Your query string is missing a proper FILENAME parameter.
         Please enter a filename that exists and make sure to use a string to do so.
