@@ -2,9 +2,10 @@ import express from 'express'
 import resizeRoute from './api/resize'
 import tintRoute from './api/tint'
 import grayscaleRoute from './api/grayscale'
+import validateInput from './middleware/validateInput'
 const routes = express.Router()
 
-routes.use('/resize', resizeRoute)
+routes.use('/resize', validateInput, resizeRoute)
 routes.use('/tint', tintRoute)
 routes.use('/grayscale', grayscaleRoute)
 
