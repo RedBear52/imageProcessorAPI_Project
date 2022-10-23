@@ -12,7 +12,7 @@ const processImage = async (
     )
     await sharp(imgPath)
     .resize(parseInt(`${width}`), parseInt(`${height}`), {
-        fit: sharp.fit.contain,
+        fit: sharp.fit.cover,
         withoutEnlargement: false,
     })
     .toFile(procImgPath)
