@@ -53,9 +53,9 @@ Step 1 - Clone the repo via the CLI with the following command:
 Step 2 - `cd` into the cloned project directory and install all requisite dependencies: `npm install`.
 
 Optional:
-Run the test script:  `npm run test`
-Run the lint script:  `npm run lint`
-Run the code formatter:  `npm run format`
+- Run the test script:  `npm run test`
+- Run the lint script:  `npm run lint`
+- Run the code formatter:  `npm run format`
 
 Step 3 - Compile to js: `npm run build`
 
