@@ -1,7 +1,7 @@
-# Image Processor API '
+# Image Processor API 
 
 # Project Explanation
-The Image Processor API will resize images and store them on a server for subsequent, rapid retrieval.
+The Image Processor API will resize images and store them locally for subsequent, rapid retrieval.
 
 Their are many potential use cases for this API as it could serve as the foundation on which to build:
 - A thumbnail generator
@@ -75,9 +75,9 @@ Available filenames:
 - siue
 
 Examples of properly formatted URLs with query strings:
-`http://localhost:3200/api/resize?filename=andonian&width=1200&height=800`
-`http://localhost:3200/api/resize?filename=mocco&width=800&height=600`
-`http://localhost:3200/api/resize?width=800&height=600&filename=elam`
+- `http://localhost:3200/api/resize?filename=siue&width=1200&height=800`
+- `http://localhost:3200/api/resize?filename=mocco&width=800&height=600`
+- `http://localhost:3200/api/resize?width=800&height=600&filename=elam`
 
 # Testing
 [(Back to Table of Contents)](#table-of-contents)
