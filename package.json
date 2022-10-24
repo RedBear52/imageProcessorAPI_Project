@@ -5,7 +5,7 @@
   "main": "dist/src/server/server.js",
   "scripts": {
     "test": "jasmine",
-    "start": "nodemon dist/src/server/server.js",
+    "start": "nodemon ./dist/src/server/server",
     "build": "npx tsc",
     "lint": "eslint",
     "format": "prettier  --config .prettierrc 'src/**/*.ts' --write"
