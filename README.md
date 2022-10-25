@@ -77,7 +77,7 @@ Once you've got the program up and running, you can review the functionality by 
 Navigate to API's root endpoint `http://localhost:3200/api/resize` and then add the appropriate query string parameters to the URL.
 
 Available filenames:
-- andonia
+- andonian
 - elam 
 - happel
 - mocco
