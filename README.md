@@ -46,7 +46,7 @@ Web technologies used in this project include:
 To run this web app, you'll need to have a rudimentary understanding of git.
 
 **Warning**
-`To ensure full and proper functionality, please be sure to use the latest LTS version of Node.`  
+`To ensure full and proper functionality, please be sure to use the latest recommended LTS version of Node.`  
 `At the time of the creation of this document, that version is: 16.18.0 `   
 `If you do not want to change your working version of Node, consider using Node Version Manager which allows you to switch versions on a project by project basis.`    
 More info on NVM here: https://github.com/nvm-sh/nvm
