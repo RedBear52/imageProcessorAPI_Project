@@ -7,7 +7,7 @@
     "test": "jasmine",
     "start": "nodemon ./dist/src/server/server",
     "build": "npx tsc",
-    "lint": "eslint",
+    "lint": "eslint . --ext .ts",
     "format": "prettier  --config .prettierrc 'src/**/*.ts' --write"
   },
   "keywords": [],

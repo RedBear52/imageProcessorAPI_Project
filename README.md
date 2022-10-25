@@ -46,14 +46,12 @@ Web technologies used in this project include:
 To run this web app, you'll need to have a rudimentary understanding of git.
 
 **Warning**
-`To ensure full and proper functionality, please be sure to the latest LTS version of Node.`  
+`To ensure full and proper functionality, please be sure to use the latest LTS version of Node.`  
 `At the time of the creation of this document, that version is: 16.18.0 `   
 `If you do not want to change your working version of Node, consider using Node Version Manager which allows you to switch versions on a project by project basis.`    
-`More info on NVM here: https://github.com/nvm-sh/nvm `   
-  
+More info on NVM here: https://github.com/nvm-sh/nvm
 
-After ensuring that you are using the latest/LTS version of Node.js, follow the steps below:  
-
+After ensuring that you are using Node 16.18.0 or a later LTS version of Node.js, follow the steps below:  
 
 Step 1 - Clone the repo via the CLI with the following command:
 

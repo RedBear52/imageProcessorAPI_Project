@@ -1,6 +1,6 @@
 import routes from '../routes/index'
+import express from 'express'
 
-const express = require('express')
 const app = express()
 const port = 3200
 
