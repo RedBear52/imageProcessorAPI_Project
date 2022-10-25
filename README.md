@@ -42,7 +42,14 @@ Web technologies used in this project include:
 
 # Installation
 [(Back to Table of Contents)](#table-of-contents)
-To run this web app, you'll need to have node.js installed and a rudimentary understanding of git.
+To run this web app, you'll need to have a rudimentary understanding of git.
+
+**Warning**
+To ensure full and proper functionality, please be sure to the latest LTS version of Node.
+At the time of the creation of this document, that version is: 16.18.0 
+If you do not want to change your working version of Node, consider using Node Version Manager which allows you to switch versions on a project by project basis.
+More info on NVM here: https://github.com/nvm-sh/nvm
+
 
 Step 1 - Clone the repo via the CLI with the following command:
 
