@@ -4,11 +4,13 @@
   "description": "",
   "main": "dist/src/server/server.js",
   "scripts": {
-    "test": "jasmine",
     "start": "nodemon ./dist/src/server/server",
+    "spec": "jasmine",
     "build": "npx tsc",
     "lint": "eslint . --ext .ts",
-    "format": "prettier  --config .prettierrc 'src/**/*.ts' --write"
+    "format": "prettier  --config .prettierrc 'src/**/*.ts' --write",
+    "test": "npm run build && npm run spec"
+
   },
   "keywords": [],
   "author": "",
