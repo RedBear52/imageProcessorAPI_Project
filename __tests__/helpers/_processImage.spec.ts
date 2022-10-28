@@ -1,4 +1,3 @@
-import { describe } from 'node:test'
 import path from 'path'
 import fs from 'fs'
 import processImage from '../../src/routes/api/processImage'

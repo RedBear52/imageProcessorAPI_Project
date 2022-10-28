@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/src/server/server.js",
   "scripts": {
-    "start": "nodemon ./dist/src/server/server",
+    "start": "node ./dist/src/server/server",
     "spec": "jasmine",
     "build": "npx tsc",
     "lint": "eslint . --ext .ts",
