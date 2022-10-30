@@ -1,10 +1,11 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
-import resizeImage from './processFactory/resizeImage'
-const resizeRoute = express.Router()
+import claheImage from './processFactory/claheImage'
 
-resizeRoute.get(
+const claheRoute = express.Router()
+
+claheRoute.get(
     '/',
     async (req: express.Request, res: express.Response): Promise<void> => {
         const filename: string = req.query.filename as string
@@ -12,11 +13,12 @@ resizeRoute.get(
         const height: number = parseInt(`${req.query.height}`)
         const imgPath = path.resolve(`./images/${filename}.jpg`)
         const procImgPath = path.resolve(
-            `./processed_images/${filename}_${width}x${height}.jpg`
+            `./processed_images/clahe_${filename}_${width}_${height}.jpg`
         )
 
         if (!fs.existsSync(procImgPath)) {
-            await resizeImage(imgPath, filename, width, height)
+            await claheImage(imgPath, filename, width, height)
+            console.log(imgPath, filename)
             res.sendFile(procImgPath)
         } else {
             res.sendFile(procImgPath)
@@ -24,4 +26,4 @@ resizeRoute.get(
     }
 )
 
-export default resizeRoute
+export default claheRoute

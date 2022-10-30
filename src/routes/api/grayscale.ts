@@ -1,22 +1,20 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
-import resizeImage from './processFactory/resizeImage'
-const resizeRoute = express.Router()
+import grayscaleImage from './processFactory/grayscaleImage'
+const grayscaleRoute = express.Router()
 
-resizeRoute.get(
+grayscaleRoute.get(
     '/',
     async (req: express.Request, res: express.Response): Promise<void> => {
         const filename: string = req.query.filename as string
-        const width: number = parseInt(`${req.query.width}`)
-        const height: number = parseInt(`${req.query.height}`)
         const imgPath = path.resolve(`./images/${filename}.jpg`)
         const procImgPath = path.resolve(
-            `./processed_images/${filename}_${width}x${height}.jpg`
+            `./processed_images/grayscale_${filename}.jpg`
         )
 
         if (!fs.existsSync(procImgPath)) {
-            await resizeImage(imgPath, filename, width, height)
+            await grayscaleImage(imgPath, filename)
             res.sendFile(procImgPath)
         } else {
             res.sendFile(procImgPath)
@@ -24,4 +22,4 @@ resizeRoute.get(
     }
 )
 
-export default resizeRoute
+export default grayscaleRoute

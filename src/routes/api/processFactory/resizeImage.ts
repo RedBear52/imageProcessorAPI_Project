@@ -1,7 +1,7 @@
 import sharp from 'sharp'
 import path from 'path'
 
-const processImage = async (
+const resizeImage = async (
     imgPath: string,
     filename: string,
     width: number,
@@ -18,4 +18,4 @@ const processImage = async (
         .toFile(procImgPath)
 }
 
-export default processImage
+export default resizeImage

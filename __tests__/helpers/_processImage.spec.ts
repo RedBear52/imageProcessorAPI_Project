@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import processImage from '../../src/routes/api/processImage'
+import resizeImage from '../../src/routes/api/processFactory/resizeImage'
 const filename = 'mocco'
 const width = 999
 const height = 888
@@ -8,7 +8,7 @@ const height = 888
 describe('Test processImage module functionality', () => {
     it(
         `Creates a new resized image and saves it to the 'processed_images' dir`, async () => {
-        await processImage(
+        await resizeImage(
             path.resolve(`./images/mocco.jpg`),
             filename, 
             width, 
